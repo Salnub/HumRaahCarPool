@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CreateRideActivity"
+    android:background="@drawable/login"
+    >
+
+    <!-- Car Details Section -->
+    <TextView
+        android:id="@+id/textViewCarDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="Select Your Route"
+        android:textColor="@color/purple2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <!-- Route Selection Section -->
+    <TextView
+        android:id="@+id/textViewRouteSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Route Selection"
+        android:textSize="20sp"
+        android:textColor="@color/purple2"
+
+        android:layout_marginTop="160dp"
+
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Map Fragment Container -->
+    <FrameLayout
+        android:id="@+id/mapFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/textViewRouteSelection"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView2"
+            android:layout_width="389dp"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- Other Form Fields -->
+    <!-- Add other form fields for route details, departure time, etc., as needed -->
+
+    <Button
+        android:id="@+id/buttonSelectStartLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_purple_button"
+        android:text="Start Location"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/mapFragmentContainer"
+        />
+    <Button
+        android:id="@+id/buttonSelectEndLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_purple_button"
+        android:text="End Location"
+        android:textColor="@color/white"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/mapFragmentContainer" />
+    <Button
+        android:id="@+id/buttonSaveRide"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Take a Ride "
+        android:layout_below="@id/mapFragmentContainer"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_purple_button"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>
